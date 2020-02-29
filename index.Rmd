@@ -1,0 +1,157 @@
+---
+title: "Topic 2: Sample Designs"
+subtitle: "ENVX2001 -- Applied Statistical Methods"
+author: "Januar Harianto"
+# date: "Updated `r format(Sys.time(), '%d %B, %Y')`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/macros.js", "assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+```{r, load_refs, echo=FALSE, cache=FALSE, message=FALSE}
+library(RefManageR)
+library(readr)
+library(kableExtra)
+
+options(knitr.kable.NA = '')
+
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           cite.style = 'authoryear', 
+           style = "markdown",
+           hyperlink = FALSE, 
+           dashed = FALSE)
+myBib <- ReadBib("assets/example.bib", check = FALSE)
+```
+
+## Outline
+
+```{r, echo=FALSE, message=FALSE}
+read_csv("assets/tables/envx2001_outline.csv") %>%
+  kable() %>%
+  # collapse_rows(columns = 1:6, valign = "top") %>%
+  kable_styling(font_size = 18) %>%
+  pack_rows("Part 1: Designed Studies", 1, 6) %>%
+  pack_rows("Part 2: Finding Patterns in Data", 7, 12) %>%
+  pack_rows("Part 3: Revision", 13, 13) %>%
+  row_spec(2, bold = TRUE, color = "darkgreen")
+```
+
+
+---
+## Learning Outcomes
+
+At the end of this Topic, students should be able to:
+
+.pull-left[
+- Calculate means and their uncertainty for a
+  - simple random design
+  - stratified random design
+- Make simple recommendations for designing sampling schemes
+- Demonstrate proficiency in the use of R for analysis of sample design data, for
+  - estimating a mean
+  - estimating a change in mean
+  - choosing sample sizes
+- Demonstrate proficiency in the use of R to generate sampling designs
+]
+
+
+
+
+
+
+---
+## Learning Outcomes
+
+At the end of this Topic, students should be able to:
+
+.pull-left[
+- **Calculate means and their uncertainty for a**
+  - **simple random design**
+  - **stratified random design**
+- Make simple recommendations for designing sampling schemes
+- Demonstrate proficiency in the use of R for analysis of sample design data, for
+  - estimating a mean
+  - estimating a change in mean
+  - choosing sample sizes
+- Demonstrate proficiency in the use of R to generate sampling designs
+]
+
+
+
+
+
+---
+## Learning Outcomes
+
+At the end of this Topic, students should be able to:
+
+.pull-left[
+- Calculate means and their uncertainty for a
+  - simple random design
+  - stratified random design
+- **Make simple recommendations for designing sampling schemes**
+- Demonstrate proficiency in the use of R for analysis of sample design data, for
+  - estimating a mean
+  - estimating a change in mean
+  - choosing sample sizes
+- Demonstrate proficiency in the use of R to generate sampling designs
+]
+
+
+
+
+
+
+---
+## Learning Outcomes
+
+At the end of this Topic, students should be able to:
+
+.pull-left[
+- Calculate means and their uncertainty for a
+  - simple random design
+  - stratified random design
+- Make simple recommendations for designing sampling schemes
+- **Demonstrate proficiency in the use of R for analysis of sample design data, for**
+  - **estimating a mean**
+  - **estimating a change in mean**
+  - **choosing sample sizes**
+- Demonstrate proficiency in the use of R to generate sampling designs
+]
+
+
+
+
+
+---
+## Learning Outcomes
+
+At the end of this Topic, students should be able to:
+
+.pull-left[
+- Calculate means and their uncertainty for a
+  - simple random design
+  - stratified random design
+- Make simple recommendations for designing sampling schemes
+- Demonstrate proficiency in the use of R for analysis of sample design data, for
+  - estimating a mean
+  - estimating a change in mean
+  - choosing sample sizes
+- **Demonstrate proficiency in the use of R to generate sampling designs**
+]
+
+
+
