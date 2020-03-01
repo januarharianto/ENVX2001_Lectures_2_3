@@ -38,9 +38,6 @@ myBib <- ReadBib("assets/example.bib", check = FALSE)
 
 
 
-
-
----
 ## Outline
 
 ```{r, echo=FALSE, message=FALSE}
@@ -348,9 +345,9 @@ kable(tecs) %>%
 ```
 
 <br>
-- the focus is the *mean* value, however this works only for:
-  - totals, proportions
-  - sampling people, households, companies... *things*
+- For this lecture, we focus on the **mean value** for data collected over a **spatial area**
+  - theory valid for totals, proportions
+  - theory valid for sampling people, households, companies... *things*
   - a different approach will be needed for **mapping**
   
   
