@@ -370,28 +370,23 @@ kable(tecs) %>%
 - Two types of populations
   - **finite**: discrete objects; e.g. no. of lakes, people
   - **infinite**: continuous variables; e.g.  water in lake, germs in people
-
-
-???
-- First of all, it is important that during a survey, you randomly select from the population. A random number generator.
-- The formal term for this probability sampling. 
-- Basically, it means that each of you has an attached probability when I sample from you.
-- So for example, if there are 100 of you here, then each of you has a 50/50 chance of being sampled if I decide to randomly sample 50 students.
-- And the probability attached to you is called inclusion probability.
-
-Why do we randomly sample?
-- We want to reduce bias as much as possible
-- You may be performing a survey on a site that you know very well about
-- So without randomisation, you may select sites that have easier access, or select locations because you already know that they will have the samples that you need. 
-- That is bias and it confounds your experiment.
-
-How we sample populations also depends on what type of population they are
-- We have finite and infinite populations.
-- Finite populations are made of discrete objects
-- Infinite populations are values that may be too many to count or are just continuous variables.
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 ---
@@ -407,15 +402,14 @@ How we sample populations also depends on what type of population they are
 
 
 
-???
-So how do we sample
-- in simple random sampling, it's just that - random.
-- For example if I want to sample from this lecture, simple random sampling just means that I don't care about who I sample, as long as it is random. 
-- So I don't care about your gender, or your age, or what your major is.
 
 
-There are 2 types or random sampling
-- Sample with replacement means that say, if I want to sample 
+
+
+
+
+
+
 
 
 
@@ -435,6 +429,22 @@ $$\bar y_{SiR} = \frac{1}{n} \times \sum_{i = 1}^{n}y_i$$
 $$V(\bar y_{SiR}) = \frac{s^2(y)}{n} = \frac{1}{n} \times \frac{\sum_{i = 1}^n(\bar y_{SiR} - y_i)}{n-1} = \frac{1}{n(n - 1)} \sum_{i = 1}^n (\bar y_{SiR} - y_i)^2$$
 
 where $S^2(y)$ is the variance of the observations and $n$ is the number of observations.
+
+
+
+
+
+
+
+
+---
+## Confidence intervals
+
+>Definition: the interval in which we are $a\%$ confident that the true population mean $\mu$ lies.
+
+.center[
+![:scale 80%](assets/figs/ci.png)
+]
 
 
 
@@ -616,23 +626,135 @@ What do we address?
 
 
 
+
+
+---
+class: middle
+
+## Stratified random sampling
+
+1. **Stratification.** The elements in the population are divided into strata based on their variables. 
+  - The strata must be non-overlapping and together constitute the whole population.
+
+2. **Sampling within strata.** Samples are selected randomly and independently from each stratum.
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Stratified random sampling
+
+<br>
+> How do we choose strata?
+<br>
+
+E.g. Age group as strata
+
+```{r, echo=FALSE}
+strata1 <- data.frame(Stratum = 1:6, Age = c("0-11", "12-17", "18-24", "25-34", "35-44", ">45"))
+
+kable(strata1) %>%
+  kable_styling()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Stratified random sampling
+
+<br>
+> How do we choose strata?
+<br>
+
+E.g. Forest type as strata
+
+.center[
+![:scale 50%](assets/figs/forests.png)
+]
+
+
+
+
+
+
+
+
+
+
 ---
 ## Stratified random sampling
 
 <br>
 > How do we choose strata?
 
-Many data sources available, e.g. for our Data Story:
-
+Data Story:
 - soil types
 - land use
 - elevation
 
-e.g. University students:
+University students:
 
 - gender 
 - degree cohort
 - local/international
+
+
+
+
+
+
+
+
+
+
+
+---
+## Why stratify?
+
+### 1. Precision
+
+If the strata are more homogenous with respect to the study variable(s) than the population as a whole, the precision of the estimates will improve. 
+
+--
+### 2. Captures individual strata characteristics
+Characteristics of each sample is weighted proportional to the entire population - similar to weighted average.
+
+--
+### 3. Practical
+We *know already* that information may differ between groups, or strata is already occurring e.g. suburbs.
+
+
+
+
+
+
+
 
 
 
@@ -752,9 +874,11 @@ kable(strata, col.names = c("#", "C (t/Ha)", "Strata")) %>%
 
 
 
-???
-We are determining the variance of the mean for each strata here
-- in other words, how far each observation is from the strata mean
+
+
+
+
+
 
 
 
@@ -784,13 +908,16 @@ We are determining the variance of the mean for each strata here
 ---
 ## Worked example: Excel
 
-- Can do in R, but too complicated for you right now
 
-Notes:
+### Notes:
+
 - Calculations are still based on the Data Story
-- Template will be used in Lab
+- Template will be used in Lab (use R if you want!)
 - The aim is to determine the 95% CI for stratified sampling
 - We can also compare the efficiency of stratified sampling vs simple random sampling
+
+
+
 
 
 
@@ -994,5 +1121,38 @@ Approaches
 
 
 
+
+
+
+
+---
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 ## Readings
+
+- Quinn & Keough (2002)
+  - Chapter 7: Section 7.1
+- Mead et al. (2002)
+  - Chapter 18: Sections 18.1-18.3 (most is for finite populations but useful for conceptual understanding)
