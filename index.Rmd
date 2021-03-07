@@ -20,7 +20,7 @@ output:
         scroll: false # disable slide transitions by scrolling
 ---
 
-```{r, load_refs, echo=FALSE, cache=FALSE, message=FALSE}
+```{r, load_refs, include=FALSE}
 library(RefManageR)
 library(readr)
 library(kableExtra)
@@ -38,46 +38,6 @@ myBib <- ReadBib("assets/example.bib", check = FALSE)
 
 
 
-## Outline
-
-```{r, echo=FALSE, message=FALSE}
-read_csv("assets/tables/envx2001_outline.csv") %>%
-  kable() %>%
-  # collapse_rows(columns = 1:6, valign = "top") %>%
-  kable_styling(font_size = 16) %>%
-  pack_rows("Part 1: Designed Studies", 1, 6) %>%
-  pack_rows("Part 2: Finding Patterns in Data", 7, 12) %>%
-  pack_rows("Part 3: Revision", 13, 13) %>%
-  row_spec(c(2, 4), bold = TRUE, color = "darkgreen")
-```
-
-
-
-
-
-
----
-## Last week...Learning outcomes
-
-.pull-left[
-- Explain differences between 
-  - samples & populations 
-  - standard error & standard deviation;
-- Describe key features of their data using 
-  - summary statistics, 
-  - graphical summaries and 
-  - confidence intervals;
-- Demonstrate proficiency in the use of R for calculating summary statistics and generating graphical summaries and performing 1-sample t-tests.
-]
-
-
-
-
-
-
-
-
----
 ## Last week...Learning outcomes
 
 .pull-left[
